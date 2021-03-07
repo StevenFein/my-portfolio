@@ -1,8 +1,8 @@
-/**Fetches the harcoded message in NewServletDemo.java and adds it to index.html */
+/**Fetches the quotes array in NewServletDemo.java and adds one to index.html */
 async function displayMessage(){
     const responseFromServer = await fetch('/demo');
-    const textFromResponse = await responseFromServer.text();
+    const arrayFromResponse = await responseFromServer.json();
 
     const demoContainer = document.getElementById('demo-container');
-    demoContainer.innerText = textFromResponse;
+    demoContainer.innerText = arrayFromResponse[Math.floor(Math.random() * arrayFromResponse.length)];
 }
