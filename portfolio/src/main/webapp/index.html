@@ -83,6 +83,23 @@
         <br/>
         <input type="submit" />
       </form>
+      <br>
+
+      <h2>Image Upload</h2>
+      <p>Upload an Image and write a message:</p>
+
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <p>Type a message or description:</p>
+        <textarea name="message"></textarea>
+        <br/>
+        <p>Upload an image:</p>
+        <input type="file" name="image">
+        <br/><br/>
+        <button>Submit</button>
+    </form>
+    <p><a href="/list-images">Click here to see all of the uploaded images!</a></p>
+
+
       
       <p>Click here to get a random message:</p>
       <button onclick="addRandomGreeting()">Hello</button>
